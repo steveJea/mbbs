@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Violance Royale - The Brutal City Series | MBBS.KR Official Portal">
+  <meta name="theme-color" content="#000000">
+  <title>Violance Royale - The Brutal City Series | MBBS.KR</title>
+  
+  <!-- Google Analytics (GA4) - 실제 Measurement ID로 교체하세요 -->
+  <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+  <!-- 실제 사용 시 위 주석을 해제하고 G-XXXXXXXXXX를 본인 GA4 ID로 변경 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #ff1a1a;
+      --accent-glow: rgba(255, 26, 26, 0.6);
+      --bg: #000000;
+      --card-bg: rgba(20, 0, 0, 0.85);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: #ffffff;
+      font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ===== HERO VIDEO SECTION ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.25) 40%,
+        rgba(0, 0, 0, 0.75) 70%,
+        rgba(0, 0, 0, 0.95) 100%
+      );
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      margin-top: auto;
+      width: 100%;
+      padding: 0 1.25rem 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      width: min(160px, 38vw);
+      height: auto;
+      margin-bottom: 1.25rem;
+      filter: drop-shadow(0 0 18px var(--accent-glow));
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .main-title {
+      font-family: 'Black Han Sans', 'Noto Sans KR', sans-serif;
+      font-size: clamp(1.8rem, 6.5vw, 3.4rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #fff;
+      text-shadow:
+        0 0 30px var(--accent-glow),
+        0 0 60px rgba(255, 0, 0, 0.4),
+        3px 3px 0 #000;
+      margin-bottom: 0.35rem;
+      line-height: 1.1;
+    }
+
+    .main-title span {
+      color: var(--accent);
+      display: inline-block;
+    }
+
+    .subtitle {
+      font-size: clamp(0.95rem, 2.8vw, 1.25rem);
+      font-weight: 700;
+      color: #e0e0e0;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2.2rem;
+      opacity: 0.9;
+    }
+
+    .btn-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.85rem;
+      max-width: 920px;
+      width: 100%;
+    }
+
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      padding: 1.05rem 1.4rem;
+      background: var(--card-bg);
+      border: 1.5px solid rgba(255, 40, 40, 0.55);
+      border-radius: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: linear-gradient(135deg, #ff1a1a 0%, #cc0000 100%);
+      border-color: #ff4444;
+      color: #fff;
+      transform: translateY(-4px) scale(1.02);
+      box-shadow:
+        0 8px 28px rgba(255, 26, 26, 0.55),
+        0 0 0 1px rgba(255, 80, 80, 0.3);
+    }
+
+    .btn:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    .btn .label {
+      font-size: 1.05rem;
+    }
+
+    .btn .platform {
+      font-size: 0.72rem;
+      font-weight: 400;
+      opacity: 0.75;
+      margin-top: 0.25rem;
+      letter-spacing: 0.03em;
+    }
+
+    .bottom-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to top, #000 0%, transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .content {
+        padding-bottom: 2.5rem;
+      }
+      .btn {
+        min-width: calc(50% - 0.5rem);
+        padding: 0.95rem 0.8rem;
+        font-size: 0.95rem;
+      }
+      .main-title {
+        font-size: clamp(1.6rem, 7vw, 2.4rem);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .btn {
+        min-width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .logo { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="video-wrapper">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="title.jpg"
+      >
+        <source src="title.mp4" type="video/mp4">
+        <img src="title.jpg" alt="Violance Royale" style="width:100%;height:100%;object-fit:cover;">
+      </video>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="bottom-fade"></div>
+
+    <div class="content">
+      <img src="logo.jpg" alt="MBBS Logo" class="logo" width="160" height="auto">
+
+      <h1 class="main-title">
+        <span>Violance</span> Royale
+      </h1>
+      <p class="subtitle">The Brutal City Series</p>
+
+      <div class="btn-grid">
+        <a href="https://battle.mbbs.kr/" class="btn" target="_blank" rel="noopener">
+          <span class="label">VR Battle Masters</span>
+          <span class="platform">PC · 모바일</span>
+        </a>
+
+        <a href="https://wcup.mbbs.kr/" class="btn" target="_blank" rel="noopener">
+          <span class="label">VR 이상형 월드컵</span>
+          <span class="platform">PC · 모바일</span>
+        </a>
+
+        <a href="https://shoot.mbbs.kr/" class="btn" target="_blank" rel="noopener">
+          <span class="label">VR Shooting Masters</span>
+          <span class="platform">PC</span>
+        </a>
+
+        <a href="https://cafe.naver.com/vroyale" class="btn" target="_blank" rel="noopener">
+          <span class="label">VR 공식카페</span>
+          <span class="platform">Naver Cafe</span>
+        </a>
+
+        <a href="https://cafe.naver.com/brutalcity" class="btn" target="_blank" rel="noopener">
+          <span class="label">VR 캐릭터 인터뷰 카페</span>
+          <span class="platform">Naver Cafe</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.querySelector('video');
+      if (video) {
+        video.play().catch(() => console.log('Video autoplay prevented'));
+      }
+    });
+  </script>
+</body>
+</html>
