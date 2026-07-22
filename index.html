@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <!-- 페이지 맨 위 -->
-<div style="text-align:center; margin-bottom: 20px;">
-  <script>
-    atOptions = {
-      'key' : 'e00495c42699d6a7432fe63f356703c8',
-      'format' : 'iframe',
-      'height' : 90,
-      'width' : 728,
-      'params' : {}
-    };
-  </script>
-  <script src="https://www.highperformanceformat.com/e00495c42699d6a7432fe63f356703c8/invoke.js"></script>
-</div>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -20,6 +7,10 @@
   <meta name="theme-color" content="#000000">
   <title>Violance Royale - The Brutal City Series | MBBS.KR</title>
   
+  <!-- Favicon (브라우저 탭 아이콘) -->
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NP3VPPBRKL"></script>
 <script>
@@ -28,6 +19,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-NP3VPPBRKL');
+  
 </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +31,7 @@
       --accent: #ff1a1a;
       --accent-glow: rgba(255, 26, 26, 0.6);
       --bg: #000000;
-      --card-bg: rgba(20, 0, 0, 0.85);
+      --card-bg: rgba(15, 0, 0, 0.9);
     }
 
     * {
@@ -57,12 +49,11 @@
       overflow-x: hidden;
     }
 
-    /* ===== HERO VIDEO SECTION ===== */
     .hero {
       position: relative;
       width: 100%;
       height: 100vh;
-      min-height: 600px;
+      min-height: 680px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -90,10 +81,10 @@
       z-index: 2;
       background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.15) 0%,
-        rgba(0, 0, 0, 0.25) 40%,
-        rgba(0, 0, 0, 0.75) 70%,
-        rgba(0, 0, 0, 0.95) 100%
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.35) 40%,
+        rgba(0, 0, 0, 0.8) 70%,
+        rgba(0, 0, 0, 0.97) 100%
       );
       pointer-events: none;
     }
@@ -103,7 +94,7 @@
       z-index: 3;
       margin-top: auto;
       width: 100%;
-      padding: 0 1.25rem 3.5rem;
+      padding: 0 1rem 2.8rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -111,232 +102,196 @@
     }
 
     .logo {
-      width: min(160px, 38vw);
+      width: min(150px, 36vw);
       height: auto;
-      margin-bottom: 1.25rem;
-      filter: drop-shadow(0 0 18px var(--accent-glow));
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.05);
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 16px var(--accent-glow));
     }
 
     .main-title {
       font-family: 'Black Han Sans', 'Noto Sans KR', sans-serif;
-      font-size: clamp(1.8rem, 6.5vw, 3.4rem);
-      font-weight: 400;
+      font-size: clamp(1.7rem, 6vw, 3.2rem);
       letter-spacing: 0.04em;
       color: #fff;
       text-shadow:
-        0 0 30px var(--accent-glow),
-        0 0 60px rgba(255, 0, 0, 0.4),
+        0 0 28px var(--accent-glow),
+        0 0 50px rgba(255, 0, 0, 0.35),
         3px 3px 0 #000;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
       line-height: 1.1;
     }
 
     .main-title span {
       color: var(--accent);
-      display: inline-block;
     }
 
     .subtitle {
-      font-size: clamp(0.95rem, 2.8vw, 1.25rem);
+      font-size: clamp(0.9rem, 2.6vw, 1.15rem);
       font-weight: 700;
-      color: #e0e0e0;
-      letter-spacing: 0.15em;
+      color: #ddd;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      margin-bottom: 2.2rem;
+      margin-bottom: 1.8rem;
       opacity: 0.9;
     }
 
-    .btn-grid {
+    /* ===== 배너 형태 바로가기 ===== */
+    .banner-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.85rem;
-      max-width: 920px;
+      gap: 0.9rem;
+      max-width: 1100px;
       width: 100%;
     }
 
-    .btn {
+    .banner {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-width: 200px;
-      padding: 1.05rem 1.4rem;
+      width: 200px;
       background: var(--card-bg);
-      border: 1.5px solid rgba(255, 40, 40, 0.55);
+      border: 1.5px solid rgba(255, 40, 40, 0.5);
       border-radius: 12px;
-      color: #fff;
+      overflow: hidden;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 1.05rem;
-      line-height: 1.3;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    .btn:hover,
-    .btn:focus {
-      background: linear-gradient(135deg, #ff1a1a 0%, #cc0000 100%);
-      border-color: #ff4444;
       color: #fff;
-      transform: translateY(-4px) scale(1.02);
-      box-shadow:
-        0 8px 28px rgba(255, 26, 26, 0.55),
-        0 0 0 1px rgba(255, 80, 80, 0.3);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
     }
 
-    .btn:active {
-      transform: translateY(-1px) scale(0.98);
+    .banner:hover {
+      transform: translateY(-5px) scale(1.03);
+      border-color: #ff3333;
+      box-shadow: 0 10px 28px rgba(255, 26, 26, 0.5);
     }
 
-    .btn .label {
-      font-size: 1.05rem;
-    }
-
-    .btn .platform {
-      font-size: 0.72rem;
-      font-weight: 400;
-      opacity: 0.75;
-      margin-top: 0.25rem;
-      letter-spacing: 0.03em;
-    }
-
-    .bottom-fade {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    .banner img {
       width: 100%;
-      height: 120px;
-      background: linear-gradient(to top, #000 0%, transparent 100%);
-      z-index: 2;
-      pointer-events: none;
+      height: 160px;
+      object-fit: contain;
+      background: #111;
+      padding: 8px;
+      display: block;
     }
 
-    @media (max-width: 640px) {
+    .banner .banner-text {
+      padding: 0.7rem 0.5rem 0.85rem;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .banner .label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .banner .platform {
+      font-size: 0.7rem;
+      opacity: 0.75;
+      margin-top: 0.2rem;
+      font-weight: 400;
+    }
+
+    /* 모바일 */
+    @media (max-width: 700px) {
+      .banner {
+        width: calc(50% - 0.5rem);
+        max-width: 180px;
+      }
+      .banner img {
+        height: 140px;
+      }
       .content {
-        padding-bottom: 2.5rem;
-      }
-      .btn {
-        min-width: calc(50% - 0.5rem);
-        padding: 0.95rem 0.8rem;
-        font-size: 0.95rem;
-      }
-      .main-title {
-        font-size: clamp(1.6rem, 7vw, 2.4rem);
+        padding-bottom: 2.2rem;
       }
     }
 
     @media (max-width: 400px) {
-      .btn {
-        min-width: 100%;
+      .banner {
+        width: 100%;
+        max-width: 260px;
       }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .btn, .logo { transition: none; }
     }
   </style>
 </head>
 <body>
   <section class="hero">
     <div class="video-wrapper">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        poster="title.jpg"
-      >
+      <video autoplay muted loop playsinline preload="auto" poster="title.jpg">
         <source src="title.mp4" type="video/mp4">
         <img src="title.jpg" alt="Violance Royale" style="width:100%;height:100%;object-fit:cover;">
       </video>
     </div>
 
     <div class="overlay"></div>
-    <div class="bottom-fade"></div>
 
     <div class="content">
-      <img src="logo.jpg" alt="MBBS Logo" class="logo" width="160" height="auto">
+      <img src="logo.jpg" alt="MBBS Logo" class="logo" width="150">
 
       <h1 class="main-title">
         <span>Violance</span> Royale
       </h1>
       <p class="subtitle">The Brutal City Series</p>
-<!-- 게임 링크들 끝나는 부분 아래 -->
 
-<script async="async" data-cfasync="false" src="https://pl30337995.effectivecpmnetwork.com/dd2280f2d9daad7caf12309ffe1c4170/invoke.js"></script>
-<div id="container-dd2280f2d9daad7caf12309ffe1c4170"></div>
-      
-      <div class="btn-grid">
-        <a href="https://battle.mbbs.kr/" class="btn" target="_blank" rel="noopener">
-          <span class="label">VR Battle Masters</span>
-          <span class="platform">PC · 모바일</span>
+      <!-- 배너형 바로가기 -->
+      <div class="banner-grid">
+        <!-- VR Battle Masters -->
+        <a href="https://battle.mbbs.kr/" class="banner" target="_blank" rel="noopener">
+          <img src="battle_btn.jpg" alt="VR Battle Masters">
+          <div class="banner-text">
+            <div class="label">VR Battle Masters</div>
+            <div class="platform">PC · 모바일</div>
+          </div>
         </a>
 
-        <a href="https://wcup.mbbs.kr/" class="btn" target="_blank" rel="noopener">
-          <span class="label">VR 이상형 월드컵</span>
-          <span class="platform">PC · 모바일</span>
+        <!-- VR 이상형 월드컵 -->
+        <a href="https://wcup.mbbs.kr/" class="banner" target="_blank" rel="noopener">
+          <img src="wcup_btn.jpg" alt="VR 이상형 월드컵">
+          <div class="banner-text">
+            <div class="label">VR 이상형 월드컵</div>
+            <div class="platform">PC · 모바일</div>
+          </div>
         </a>
 
-        <a href="https://shoot.mbbs.kr/" class="btn" target="_blank" rel="noopener">
-          <span class="label">VR Shooting Masters</span>
-          <span class="platform">PC</span>
+        <!-- VR Shooting Masters -->
+        <a href="https://shoot.mbbs.kr/" class="banner" target="_blank" rel="noopener">
+          <img src="shoot_btn.jpg" alt="VR Shooting Masters">
+          <div class="banner-text">
+            <div class="label">VR Shooting Masters</div>
+            <div class="platform">PC</div>
+          </div>
         </a>
 
-        <a href="https://cafe.naver.com/vroyale" class="btn" target="_blank" rel="noopener">
-          <span class="label">VR 공식카페</span>
-          <span class="platform">Naver Cafe</span>
+        <!-- VR 공식카페 -->
+        <a href="https://cafe.naver.com/vroyale" class="banner" target="_blank" rel="noopener">
+          <img src="btn_cafe1.jpg" alt="VR 공식카페">
+          <div class="banner-text">
+            <div class="label">VR 공식카페</div>
+            <div class="platform">Naver Cafe</div>
+          </div>
         </a>
 
-        <a href="https://cafe.naver.com/brutalcity" class="btn" target="_blank" rel="noopener">
-          <span class="label">VR 캐릭터 인터뷰 카페</span>
-          <span class="platform">Naver Cafe</span>
+        <!-- VR 캐릭터 인터뷰 카페 -->
+        <a href="https://cafe.naver.com/brutalcity" class="banner" target="_blank" rel="noopener">
+          <img src="btn_cafe2.jpg" alt="VR 캐릭터 인터뷰 카페">
+          <div class="banner-text">
+            <div class="label">VR 캐릭터 인터뷰 카페</div>
+            <div class="platform">Naver Cafe</div>
+          </div>
         </a>
       </div>
     </div>
   </section>
-<!-- 게임 링크 목록 아래 -->
-<div style="text-align:center; margin: 30px 0;">
-  <script>
-    atOptions = {
-      'key' : '3fc18b3f6d2a27aff4154b294166a5fe',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {}
-    };
-  </script>
-  <script src="https://www.highperformanceformat.com/3fc18b3f6d2a27aff4154b294166a5fe/invoke.js"></script>
-</div>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const video = document.querySelector('video');
       if (video) {
-        video.play().catch(() => console.log('Video autoplay prevented'));
+        video.play().catch(() => {});
       }
     });
   </script>
-  <div style="text-align:center; margin: 20px 0;">
-  <script>
-    atOptions = {
-      'key' : '1eda070fdfa555d9673712d7e38280bf',
-      'format' : 'iframe',
-      'height' : 50,
-      'width' : 320,
-      'params' : {}
-    };
-  </script>
-  <script src="https://www.highperformanceformat.com/1eda070fdfa555d9673712d7e38280bf/invoke.js"></script>
-</div>
 </body>
 </html>
