@@ -224,6 +224,29 @@
       display: block;
     }
 
+    .banner { position: relative; }
+
+    .banner .new-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #ff1a1a;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      box-shadow: 0 0 10px rgba(255, 26, 26, 0.8);
+      animation: newPulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes newPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+    }
+
     .banner .banner-text {
       padding: 0.7rem 0.5rem 0.85rem;
       width: 100%;
@@ -313,6 +336,16 @@
           </div>
         </a>
 
+        <!-- VR TCG (NEW) -->
+        <a href="https://tcg.mbbs.kr/" class="banner" target="_blank" rel="noopener">
+          <span class="new-badge">NEW</span>
+          <img src="https://raw.githubusercontent.com/steveJea/mbbs/main/img/tcg_btn.jpg" alt="VR TCG">
+          <div class="banner-text">
+            <div class="label">VR TCG</div>
+            <div class="platform">PC · 모바일</div>
+          </div>
+        </a>
+
         <!-- VR 공식카페 -->
         <a href="https://cafe.naver.com/vroyale" class="banner" target="_blank" rel="noopener">
           <img src="https://raw.githubusercontent.com/steveJea/mbbs/main/img/btn_cafe1.jpg" alt="VR 공식카페">
@@ -332,11 +365,11 @@
         </a>
 
         <!-- YouTube 채널 -->
-        <a href="https://www.youtube.com/@ViolenceRoyale" class="banner" target="_blank" rel="noopener">
+        <a href="https://www.youtube.com/@mbbs_music" class="banner" target="_blank" rel="noopener">
           <img src="https://raw.githubusercontent.com/steveJea/mbbs/main/img/yt_btn.jpg" alt="YouTube Channel">
           <div class="banner-text">
             <div class="label">YouTube 채널</div>
-            <div class="platform">Violence Royale</div>
+            <div class="platform">@mbbs_music</div>
           </div>
         </a>
       </div>
