@@ -57,3 +57,4 @@ h2{font-family:'Black Han Sans';font-weight:400;font-size:clamp(2rem,5vw,3rem);m
 .mg .mgd{background:#111;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;gap:.6rem;padding-bottom:1rem;align-items:flex-start;transition:.2s}.mg .mgd:hover{border-color:var(--red)}
 .mg .bt2{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 1rem}.mg .bt2 .btn{margin:0}.mg .bt2 .btn.ghost{background:transparent;border-color:var(--red)}
 @media(max-width:600px){.mg .bt2{margin:0 .6rem}}
+.mg .bt2{flex-wrap:nowrap}.mg .bt2 .btn{flex:1;text-align:center;padding:.55rem .5rem}@media(max-width:600px){.mg .bt2 .btn{font-size:.62rem;padding:.5rem .3rem}}
