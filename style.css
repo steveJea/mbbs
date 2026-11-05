@@ -54,3 +54,6 @@ h2{font-family:'Black Han Sans';font-weight:400;font-size:clamp(2rem,5vw,3rem);m
 .dex{grid-template-columns:repeat(2,1fr);gap:.6rem}.cc figcaption{padding:2rem .55rem .6rem;gap:.3rem}.cc b{font-size:.88rem}.cc .el{font-size:.58rem}
 .mg{gap:.6rem}.mg h4{font-size:.92rem}.mg .btn{font-size:.7rem;padding:.5rem .7rem;margin:0 .6rem}.mg .tag,.mg h4{margin:0 .6rem}.more{grid-template-columns:repeat(2,1fr)}
 .flt{align-items:flex-start;flex-direction:column;gap:.4rem}.feat>div{padding:1.4rem}.feat h3{font-size:1.7rem}}
+.mg .mgd{background:#111;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;gap:.6rem;padding-bottom:1rem;align-items:flex-start;transition:.2s}.mg .mgd:hover{border-color:var(--red)}
+.mg .bt2{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 1rem}.mg .bt2 .btn{margin:0}.mg .bt2 .btn.ghost{background:transparent;border-color:var(--red)}
+@media(max-width:600px){.mg .bt2{margin:0 .6rem}}
