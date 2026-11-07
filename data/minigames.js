@@ -147,6 +147,28 @@
       platforms: [
         { type: "web", url: "https://shoot.mbbs.kr/", public: true }
       ]
+    },
+    {
+      id: "cardflip",
+      title: "VR 카드 뒤집기",
+      category: "puzzle",
+      description: "같은 캐릭터 카드 짝을 맞추며 별과 콤보에 도전하는 기억력 퍼즐",
+      image: "assets/img/mg-cardflip.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_brain_test_bot/play", public: true },
+        { type: "web", url: "https://vr-card.pages.dev", public: true }
+      ]
+    },
+    {
+      id: "gomoku",
+      title: "VR 배틀오목",
+      category: "versus",
+      description: "29명 캐릭터의 스킬로 겨루는 오목. AI 3단계와 2인 대전, 도감 수집을 즐겨요.",
+      image: "assets/img/mg-gomoku.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_gomoku_bot/play", public: true },
+        { type: "web", url: "https://vr-gomoku.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
