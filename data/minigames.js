@@ -202,6 +202,17 @@
         { type: "telegram", url: "https://t.me/VR_FILL_BOTTLE_BOT/PLAY", public: true },
         { type: "web", url: "https://vr-potion.pages.dev", public: true }
       ]
+    },
+    {
+      id: "screw",
+      title: "VR 나사풀기",
+      category: "puzzle",
+      description: "귀여운 VR 캐릭터 판의 알록달록 나사를 풀어 5칸 트레이에 정리하는 퍼즐! 65스테이지와 부스터·도감을 즐겨요.",
+      image: "assets/img/mg-screw.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_solve_screw_bot/play", public: true },
+        { type: "web", url: "https://vr-screw.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
