@@ -191,6 +191,17 @@
         { type: "telegram", url: "https://t.me/VR_TILE_MATCHING_BOT/PLAY", public: true },
         { type: "web", url: "https://vr-tile.pages.dev", public: true }
       ]
+    },
+    {
+      id: "potion",
+      title: "VR 물약 정렬",
+      category: "puzzle",
+      description: "같은 색 물약을 한 병에 모으는 퍼즐! 응원 친구와 도감을 만나며 70스테이지에 도전하세요.",
+      image: "assets/img/mg-potion.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_FILL_BOTTLE_BOT/PLAY", public: true },
+        { type: "web", url: "https://vr-potion.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
