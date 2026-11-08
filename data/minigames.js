@@ -180,6 +180,17 @@
         { type: "telegram", url: "https://t.me/VR_BUBBLE_CRUSH_BOT/PLAY", public: true },
         { type: "web", url: "https://vr-bubble-4b6.pages.dev", public: true }
       ]
+    },
+    {
+      id: "tile",
+      title: "VR 타일 매칭",
+      category: "puzzle",
+      description: "귀여운 VR 캐릭터 타일 3개를 모아 없애는 퍼즐! 36스테이지에 도전하세요.",
+      image: "assets/img/mg-tile.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_TILE_MATCHING_BOT/PLAY", public: true },
+        { type: "web", url: "https://vr-tile.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
