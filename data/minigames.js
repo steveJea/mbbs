@@ -169,6 +169,17 @@
         { type: "telegram", url: "https://t.me/VR_gomoku_bot/play", public: true },
         { type: "web", url: "https://vr-gomoku.pages.dev", public: true }
       ]
+    },
+    {
+      id: "bubble",
+      title: "VR 버블 슈터",
+      category: "puzzle",
+      description: "캐릭터 얼굴 버블을 쏴서 같은 색 3개 이상 맞추는 버블 슈터. 30스테이지 이상, 별점과 폭탄·무지개 버블을 즐겨요.",
+      image: "assets/img/mg-bubble.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_BUBBLE_CRUSH_BOT/PLAY", public: true },
+        { type: "web", url: "https://vr-bubble-4b6.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
