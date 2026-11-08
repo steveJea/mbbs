@@ -213,6 +213,17 @@
         { type: "telegram", url: "https://t.me/VR_solve_screw_bot/play", public: true },
         { type: "web", url: "https://vr-screw.pages.dev", public: true }
       ]
+    },
+    {
+      id: "hexa",
+      title: "VR 헥사 정렬",
+      category: "puzzle",
+      description: "귀여운 VR 캐릭터 육각 타일 더미를 끌어다 놓아 같은 색끼리 합치고 10장씩 터뜨리는 퍼즐! 72스테이지와 부스터·도감을 즐겨요.",
+      image: "assets/img/mg-hexa.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_HEXA_bot/play", public: true },
+        { type: "web", url: "https://vr-hexa.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
