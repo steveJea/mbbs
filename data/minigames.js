@@ -224,6 +224,28 @@
         { type: "telegram", url: "https://t.me/VR_HEXA_bot/play", public: true },
         { type: "web", url: "https://vr-hexa.pages.dev", public: true }
       ]
+    },
+    {
+      id: "cafe",
+      title: "VR 카페 운영",
+      category: "puzzle",
+      description: "캐릭터 손님의 주문대로 음료를 만드는 카페 경영 퍼즐! 66레벨과 업그레이드 상점·손님 도감을 즐겨요.",
+      image: "assets/img/mg-cafe.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_Cafe_Serving_bot/play", public: true },
+        { type: "web", url: "https://vr-cafe.pages.dev", public: true }
+      ]
+    },
+    {
+      id: "untangle",
+      title: "VR 실 풀기",
+      category: "puzzle",
+      description: "캐릭터 노드를 옮겨 꼬인 선을 풀어내는 퍼즐! 64스테이지에 도전하세요.",
+      image: "assets/img/mg-untangle.webp",
+      platforms: [
+        { type: "telegram", url: "https://t.me/VR_Untangle_bot/play", public: true },
+        { type: "web", url: "https://vr-untangle.pages.dev", public: true }
+      ]
     }
   ];
 })(typeof globalThis !== "undefined" ? globalThis : this);
