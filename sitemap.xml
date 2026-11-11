@@ -9,5 +9,10 @@
     <lastmod>2026-11-10</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://mbbs.kr/news/update-20261111</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.6</priority>
+  </url>
   <!-- mbbs.kr에 추가 페이지가 있다면 여기에 -->
 </urlset>

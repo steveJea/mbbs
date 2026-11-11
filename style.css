@@ -58,6 +58,7 @@ h2{font-family:'Black Han Sans';font-weight:400;font-size:clamp(2rem,5vw,3rem);m
 .nt{font-weight:900;padding:.15rem .55rem;border-radius:4px;background:#333}.t-update{background:#1d4ed8}.t-event{background:#b45309}.t-patch{background:#047857}
 .smp{border:1px dashed #888;color:#aaa;padding:.1rem .45rem;border-radius:4px}
 .news h4{font-size:1.05rem;margin-bottom:.3rem}.news p{color:#aaa;font-size:.9rem;line-height:1.6}
+.news a.news-a{display:block}.news a.news-a:hover h4{color:var(--red2)}
 .flt{display:flex;gap:.8rem;align-items:center;margin-bottom:.7rem}.flt>span{font-weight:900;font-size:.85rem;width:3.2rem;flex-shrink:0;color:var(--mut)}
 .flt>div{display:flex;gap:.4rem;flex-wrap:wrap}.cnt{color:var(--mut);margin:1rem 0;font-size:.85rem}
 .dex{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.9rem}
