@@ -18,10 +18,7 @@ main.page{padding:6.5rem 0 4rem}
 .move{margin:.95rem 0 0;padding:.7rem .9rem;border-left:3px solid var(--red);border-radius:10px;background:#e0102a18;line-height:1.65;font-weight:700}
 .move a{text-decoration:underline;text-underline-offset:3px}
 .kst{color:var(--mut);font-size:.88rem;font-weight:700;margin:1.3rem 0 .7rem}
-.times{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.time{border:1px solid var(--line);border-radius:16px;background:#111;padding:1rem 1.1rem}
-.time span{display:block;color:var(--mut);font-size:.8rem;font-weight:900;margin-bottom:.4rem}
-.time b{display:block;font-size:1.02rem;line-height:1.5;font-weight:700}
+.window{border:1px solid var(--line);border-radius:16px;background:#111;padding:1rem 1.1rem;font-size:clamp(1rem,2.6vw,1.2rem);font-weight:700;line-height:1.5}
 .count{margin:1rem 0 0;padding:1.25rem 1rem 1.15rem;border:1px solid var(--line);border-radius:18px;background:#0c0c0e;text-align:center}
 .count .cap{color:var(--red2);font-weight:900;letter-spacing:.16em;font-size:.78rem}
 .count .left{font-family:'Black Han Sans',sans-serif;font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.25;margin-top:.35rem}
@@ -29,7 +26,7 @@ main.page{padding:6.5rem 0 4rem}
 .hint,.extra{color:var(--mut);font-size:.9rem;line-height:1.6;margin-top:.9rem}
 .links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
 .links a{min-height:44px}
-@media(max-width:600px){main.page{padding:5.2rem 0 3rem}.times{grid-template-columns:1fr}}
+@media(max-width:600px){main.page{padding:5.2rem 0 3rem}}
 </style>
 </head><body>
 <header class="nav"><a class="brand" href="/"><img src="/assets/img/vr-logo.webp" alt="Violence Royale"><span>MBBS</span></a>
@@ -38,12 +35,9 @@ main.page{padding:6.5rem 0 4rem}
 <p class="kicker">Maintenance</p>
 <h1>서버 업데이트 중</h1>
 <p class="lead">어비스게이트 서버를 업데이트하고 있습니다.<br>이용에 불편을 드려 죄송합니다.</p>
-<p class="move">게임 주소가 바뀌어요: <a href="https://ag.violenceroyale.com" target="_blank" rel="noopener">ag.violenceroyale.com</a> (기존 tcg.mbbs.kr은 새 주소로 자동 이동). 새 주소에서는 다시 로그인해야 해요. 게스트는 업데이트 전에 계정 연동을 권장해요. 게스트 진행과 AUTO 등 일부 기기 설정은 이어지지 않을 수 있어요.</p>
+<p class="move">게임 공식 주소가 <a href="https://ag.violenceroyale.com" target="_blank" rel="noopener">ag.violenceroyale.com</a> 으로 바뀝니다. 기존 tcg.mbbs.kr도 당분간 열리며, 이후 새 주소로 자동 이동됩니다. 새 주소에서는 한 번 다시 로그인해 주세요. 로그인 계정의 기록은 그대로이고, 게스트 기록은 주소별로 따로 저장되니 로그인 후 이용을 권장합니다.</p>
 <p class="kst">한국 시간 (KST)</p>
-<div class="times">
-<p class="time"><span>시작 예정</span><b id="maintStart">시간을 확인하고 있습니다</b></p>
-<p class="time"><span>종료 예정</span><b id="maintEnd">시간을 확인하고 있습니다</b></p>
-</div>
+<p class="window" id="maintWindow">시간을 확인하고 있습니다</p>
 <div class="count" id="maintLive" aria-live="off">
 <p class="cap" id="maintCap">종료까지</p>
 <p class="left" id="maintLeft">—</p>

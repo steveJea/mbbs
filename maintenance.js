@@ -32,13 +32,22 @@
     };
   }
 
-  function formatKst(date) {
-    var w = seoulWall(date);
-    var period = w.hour < 12 ? '오전' : '오후';
-    var h12 = w.hour % 12;
-    if (h12 === 0) h12 = 12;
-    var minute = String(w.minute).padStart(2, '0');
-    return w.month + '월 ' + w.day + '일(' + WEEK[w.weekday] + ') ' + period + ' ' + h12 + ':' + minute + ' (KST)';
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function dayStamp(w) {
+    return Date.UTC(w.year, w.month - 1, w.day);
+  }
+
+  function formatWindow(start, end) {
+    var a = seoulWall(start);
+    var b = seoulWall(end);
+    var head = a.year + '-' + pad(a.month) + '-' + pad(a.day) + '(' + WEEK[a.weekday] + ') ' + pad(a.hour) + ':' + pad(a.minute);
+    var nextMidnight = b.hour === 0 && b.minute === 0 && (dayStamp(b) - dayStamp(a)) === 86400000;
+    if (nextMidnight) return head + ' ~ 24:00 (KST)';
+    var endClock = pad(b.hour) + ':' + pad(b.minute);
+    if (a.year === b.year && a.month === b.month && a.day === b.day) return head + ' ~ ' + endClock + ' (KST)';
+    var endHead = b.year + '-' + pad(b.month) + '-' + pad(b.day) + '(' + WEEK[b.weekday] + ') ' + endClock;
+    return head + ' ~ ' + endHead + ' (KST)';
   }
 
   function onMaintenancePage() {
@@ -79,25 +88,18 @@
   }
 
   function paintTimes(times) {
-    var startEl = document.getElementById('maintStart');
-    var endEl = document.getElementById('maintEnd');
-    if (!startEl || !endEl) return;
+    var windowEl = document.getElementById('maintWindow');
+    if (!windowEl) return;
     var hint = document.getElementById('maintHint');
     var noteEl = document.getElementById('maintNote');
     if (!times.start || !times.end) {
-      startEl.textContent = '—';
-      endEl.textContent = '—';
-      if (hint) hint.textContent = '시간을 읽지 못했습니다. maintenance-config.js의 start와 end를 확인해 주세요.';
+      windowEl.textContent = '시간을 읽지 못했습니다. maintenance-config.js의 start와 end를 확인해 주세요.';
       return;
     }
-    startEl.dateTime = times.start.toISOString();
-    endEl.dateTime = times.end.toISOString();
-    startEl.textContent = formatKst(times.start);
-    endEl.textContent = formatKst(times.end);
+    windowEl.textContent = formatWindow(times.start, times.end);
     if (hint) {
-      hint.textContent = times.overridden
-        ? '주소에 적힌 시간입니다. 한국 시간(KST)으로 해석했습니다.'
-        : '자리표시 시간입니다. 확정된 시간이 아닙니다.';
+      hint.hidden = !times.overridden;
+      hint.textContent = times.overridden ? '주소에 적힌 시간입니다. 한국 시간(KST)으로 해석했습니다.' : '';
     }
     if (noteEl) {
       var note = String(times.note || '').trim();
@@ -134,10 +136,10 @@
     }
   }
 
-  window.MBBSMaint = { parseKst: parseKst, formatKst: formatKst, resolve: resolve, remainText: remainText };
+  window.MBBSMaint = { parseKst: parseKst, formatWindow: formatWindow, resolve: resolve, remainText: remainText };
 
   function boot() {
-    if (!document.getElementById('maintStart')) return;
+    if (!document.getElementById('maintWindow')) return;
     var times = resolve(location.pathname, location.search);
     paintTimes(times);
     bootCountdown(times);
