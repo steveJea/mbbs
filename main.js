@@ -1,7 +1,7 @@
 (()=>{const $=s=>document.querySelector(s);
 const TL={update:"업데이트",event:"이벤트",patch:"패치노트"};
 let nt="all";function news(){const L=(window.MBBS_NEWS||[]).filter(n=>nt=="all"||n.type==nt).sort((a,b)=>b.date.localeCompare(a.date));
-$("#newsList").innerHTML=L.length?L.map(n=>`<li><div class="nh"><span class="nt t-${n.type}">${TL[n.type]||n.type}</span>${n.sample?'<span class="smp">샘플</span>':''}<time>${n.date}</time></div><h4>${n.title}</h4><p>${n.body}</p></li>`).join(""):'<li class="empty">아직 글이 없어요.</li>';}
+$("#newsList").innerHTML=L.length?L.map(n=>{const inner=`<div class="nh"><span class="nt t-${n.type}">${TL[n.type]||n.type}</span>${n.sample?'<span class="smp">샘플</span>':''}<time>${n.date}</time></div><h4>${n.title}</h4><p>${n.body}</p>`;return n.href?`<li><a class="news-a" href="${n.href}">${inner}</a></li>`:`<li>${inner}</li>`;}).join(""):'<li class="empty">아직 글이 없어요.</li>';}
 document.querySelectorAll("#newsTabs button").forEach(b=>b.onclick=()=>{nt=b.dataset.t;document.querySelectorAll("#newsTabs button").forEach(x=>x.classList.toggle("on",x==b));news();});news();
 const G=["N","R","HR","SR","UR","MR"],C=[["wind","바람"],["ice","얼음"],["fire","불"],["dark","DARK"],["light","빛"],["abyss","ABYSS"]],CL=Object.fromEntries(C);
 let g="all",c="all";const chip=(v,l,cur,k)=>`<button data-${k}="${v}" class="${cur==v?'on':''}">${l}</button>`;
