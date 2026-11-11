@@ -1,0 +1,67 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>서버 업데이트 중 — MBBS.KR</title>
+<meta name="description" content="서버 업데이트 중입니다. 시작 예정과 종료 예정은 한국 시간(KST)입니다.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/webp" href="/img/favicon.webp">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=359e16607062">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9WVC443VE6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9WVC443VE6');</script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "zbawtgawtd");</script>
+<style>
+main.page{padding:6.5rem 0 4rem}
+.page h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.15;margin-bottom:.7rem}
+.page .lead{margin-top:.4rem}
+.kst{color:var(--mut);font-size:.88rem;font-weight:700;margin:1.3rem 0 .7rem}
+.times{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.time{border:1px solid var(--line);border-radius:16px;background:#111;padding:1rem 1.1rem}
+.time span{display:block;color:var(--mut);font-size:.8rem;font-weight:900;margin-bottom:.4rem}
+.time b{display:block;font-size:1.02rem;line-height:1.5;font-weight:700}
+.count{margin:1rem 0 0;padding:1.25rem 1rem 1.15rem;border:1px solid var(--line);border-radius:18px;background:#0c0c0e;text-align:center}
+.count .cap{color:var(--red2);font-weight:900;letter-spacing:.16em;font-size:.78rem}
+.count .left{font-family:'Black Han Sans',sans-serif;font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.25;margin-top:.35rem}
+.soon{font-family:'Black Han Sans',sans-serif;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.2;margin:.2rem 0 .9rem}
+.hint,.extra{color:var(--mut);font-size:.9rem;line-height:1.6;margin-top:.9rem}
+.links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.links a{min-height:44px}
+@media(max-width:600px){main.page{padding:5.2rem 0 3rem}.times{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header class="nav"><a class="brand" href="/"><img src="/assets/img/vr-logo.webp" alt="Violence Royale"><span>MBBS</span></a>
+<nav><a href="/#games">게임</a><a href="/#news">소식</a><a href="/#dex">도감</a></nav></header>
+<main class="sec page"><div class="wrap">
+<p class="kicker">Maintenance</p>
+<h1>서버 업데이트 중</h1>
+<p class="lead">어비스게이트 서버를 업데이트하고 있습니다.<br>이용에 불편을 드려 죄송합니다.</p>
+<p class="kst">한국 시간 (KST)</p>
+<div class="times">
+<p class="time"><span>시작 예정</span><b id="maintStart">시간을 확인하고 있습니다</b></p>
+<p class="time"><span>종료 예정</span><b id="maintEnd">시간을 확인하고 있습니다</b></p>
+</div>
+<div class="count" id="maintLive" aria-live="off">
+<p class="cap" id="maintCap">종료까지</p>
+<p class="left" id="maintLeft">—</p>
+<div id="maintSoon" hidden>
+<p class="soon">곧 다시 열려요</p>
+<p><a class="btn red" href="https://ag.violenceroyale.com" target="_blank" rel="noopener">어비스게이트 열기</a></p>
+</div>
+</div>
+<p class="hint" id="maintHint"></p>
+<p class="extra" id="maintNote" hidden></p>
+<div class="links">
+<a class="btn ghost" href="/news/update-20261111">업데이트 안내</a>
+<a class="btn ghost" href="/#news">소식판</a>
+</div>
+<noscript><p class="hint">남은 시간을 보려면 자바스크립트가 필요합니다. 시작·종료 시각은 maintenance-config.js에 있습니다.</p></noscript>
+</div></main>
+<footer class="ft"><div class="wrap">
+<p><a href="/privacy">개인정보처리방침</a></p>
+<p><a href="https://violenceroyale.com" target="_blank" rel="noopener">세계관 · 게임 소개 → violenceroyale.com</a></p>
+<p><a class="ent" href="https://entincode.co.kr" target="_blank" rel="noopener">by <img src="/assets/img/entincode_white.svg" alt="Ent.incode"></a></p>
+<p class="c">© 2026 Ent.incode. All rights reserved.</p></div></footer>
+<script src="/maintenance-config.js"></script>
+<script src="/maintenance.js"></script>
+</body></html>
